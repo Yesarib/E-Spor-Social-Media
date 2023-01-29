@@ -25,6 +25,7 @@ const Header = () => {
               <Nav style={{padding:'2px',justifyContent:'space-between'}} className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="#home">Ana Sayfa</Nav.Link>
                 <Nav.Link href="#link">Alımlar</Nav.Link>
+                <Nav.Link href="#link">Turnuvalar</Nav.Link>
                 <NavDropdown title="Espada 6" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Profil</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
