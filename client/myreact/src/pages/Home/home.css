@@ -7,7 +7,8 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
 .left .profile{
@@ -81,23 +82,29 @@
 }
 
 .mid{
-    margin-left: 15px;
+    margin-left: 85px;
     margin-top: 40px;
-    width: 51%;
+    width: 48%;
     height: auto;
     border-radius: 1px;
 }
 
 .right{
-    margin-left: 25px;
+    position: absolute;
+    right: 0;
+    float: right;
+    margin-right: 40px;
     margin-top: 20px;
-    width: 450px;
+    width: 380px;
+    
 }
 
 .right .tournament {
     background: rgba(220, 220, 220, 0.1);
     border-radius: 10px;
     height: 250px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
 .right .tournament h5{
@@ -123,10 +130,12 @@
 
 .right .teams{
     margin-top: 15px;
-    width: 450px;
+    width: 380px;
     height: 270px;
     background: rgba(220, 220, 220, 0.1);
     border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 
 }
 .right .teams h5{
