@@ -8,10 +8,11 @@ import Button from 'react-bootstrap/Button';
 
 
 const Header = () => {
+
     return (
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">E-Spor</Navbar.Brand>
+            <Navbar.Brand href="/">E-Spor</Navbar.Brand>
             <Form style={{marginLeft:'35px',width:'25em'}} className="d-flex">
                   <Form.Control
                     type="search"
@@ -23,10 +24,10 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav style={{padding:'2px',justifyContent:'space-between'}} className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href='/'>Home</Nav.Link>
                 <Nav.Link href="#link">Looking For Player</Nav.Link>
                 <Nav.Link href="#link">Tournaments</Nav.Link>
-                <Nav.Link href="#link">Login</Nav.Link>
+                <Nav.Link href="/Login">Login</Nav.Link>
 
 
                 {/* <NavDropdown title="Espada 6" id="basic-nav-dropdown">

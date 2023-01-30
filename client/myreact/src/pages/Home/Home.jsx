@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './home.css'
-import User from '../../../datas/User'
+import User from '../../datas/User'
+import Share from "../../component/Share/Share";
 const Home = () => {
 
   const [user] = useState(User);
@@ -43,7 +44,7 @@ const Home = () => {
       {/* -----------------Middle Buradan Başlıyor --------------------------------------------------*/}
 
       <div className="mid">
-        MİD
+        <Share />
       </div>
 
       {/* -----------------Right Buradan Başlıyor --------------------------------------------------*/}
