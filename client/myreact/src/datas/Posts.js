@@ -121,7 +121,7 @@ export const Users = [
     },
     {
       id: 9,
-      desc: "Change the world by being yourself.",
+      desc: "What a wonderful view.",
       photo: "assets/post/pubg3.jpg",
       date: "5 days ago",
       userId: 9,
