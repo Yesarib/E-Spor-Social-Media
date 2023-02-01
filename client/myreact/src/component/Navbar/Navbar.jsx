@@ -26,7 +26,7 @@ const Header = () => {
                 <Nav.Link href='/'>Home</Nav.Link>
                 <Nav.Link href="#link">Looking For Player</Nav.Link>
                 <Nav.Link href="#link">Tournaments</Nav.Link>
-                <Nav.Link href="/Login">Login</Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
 
 
                 {/* <NavDropdown title="Espada 6" id="basic-nav-dropdown">

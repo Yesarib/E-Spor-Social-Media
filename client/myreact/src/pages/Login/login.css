@@ -1,0 +1,15 @@
+.orta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 500px;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.form__input{
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+}
