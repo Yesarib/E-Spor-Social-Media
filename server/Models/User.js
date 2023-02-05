@@ -34,12 +34,12 @@ const UserSchema = new mongoose.Schema(
 
         },
         follow : {
-            type: Number,
-            default: 0,
+            type: Array,
+            default: [],
         },
         follower : {
-            tpye: Number,
-            default: 0,
+            tpye: Array,
+            default: [],
         }
     }, {timestamps : true}
 );
