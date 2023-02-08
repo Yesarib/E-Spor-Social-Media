@@ -20,6 +20,11 @@ const Register = () => {
               </div>
 
               <div className="form-outline mb-4">
+                <label style={{float:'left',marginLeft:'2px'}} className="form-label" for="typeEmailX-2">Last name</label>
+                <input type="text" id="typeEmailX-2" className="form-control form-control-lg" placeholder="Last name"/>
+              </div>
+
+              <div className="form-outline mb-4">
                 <label style={{float:'left',marginLeft:'2px'}} className="form-label" for="typeEmailX-2">Nick</label>
                 <input type="text" id="typeEmailX-2" className="form-control form-control-lg" placeholder="Nick"/>
               </div>
