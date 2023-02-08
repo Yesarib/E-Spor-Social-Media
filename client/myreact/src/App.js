@@ -6,18 +6,31 @@ import Navbar from './component/Navbar/Navbar'
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Profile from './pages/Profile/Profile';
+import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import { CssBaseline,ThemeProvider } from '@material-ui/core';
+import { createTheme } from '@material-ui/core';
+import { themeSettings } from './theme';
 
 function App() {
+
+  const mode = useSelector((state) => state.mode);
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
   return (
     <div >
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/profile/:userId' element={<Profile />} />
-        </Routes>
+        <ThemeProvider theme={theme}>ü
+          <CssBaseline/>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/profile/:userId' element={<Profile />} />
+          </Routes>
+        </ThemeProvider>
+        
       </Router>
     </div>
   );
