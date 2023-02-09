@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,6 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 // import { setMode, setLogout } from 'state';
 import { useNavigate } from "react-router-dom";
 import { useTheme } from '@mui/material';
+import { DarkMode, LightMode } from '@mui/icons-material'
+import { IconButton } from "@mui/material";
+import { setMode, setLogout } from "../../states";
 
 const Header = () => {
   // const [isMobil,setIsMobil] = useState(false);
@@ -15,10 +18,15 @@ const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const theme = useTheme();
+  const neutralLight = theme.palette.neutral.light;
+  const dark = theme.palette.neutral.dark;
+  const background = theme.palette.background.default;
+  const primaryLight = theme.palette.primary.light;
+  const alt = theme.palette.background.alt;
 
   // const name = user.nick;
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg={neutralLight} expand="lg">
       <Container>
         <Navbar.Brand href="/">E-Spor</Navbar.Brand>
         <Form style={{ marginLeft: "35px", width: "25em" }} className="d-flex">
@@ -38,6 +46,13 @@ const Header = () => {
             <Nav.Link style={{fontSize:'14px'}} href="/">Home</Nav.Link>
             <Nav.Link style={{fontSize:'14px'}} href="#link">Looking For Player</Nav.Link>
             <Nav.Link style={{fontSize:'14px'}} href="#link">Tournaments</Nav.Link>
+            <IconButton onClick={() => dispatch(setMode())}>
+            {theme.palette.mode === "dark" ? (
+              <DarkMode sx={{ fontSize: "25px" }} />
+            ) : (
+              <LightMode sx={{ color: dark, fontSize: "25px" }} />
+            )}
+          </IconButton>
             <Nav.Link style={{fontSize:'14px'}} href="/login">Login</Nav.Link>
 
             {/* <NavDropdown title="Espada 6" id="basic-nav-dropdown">

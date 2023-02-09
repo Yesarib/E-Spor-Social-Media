@@ -8,8 +8,8 @@ import Register from './pages/Register/Register';
 import Profile from './pages/Profile/Profile';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { CssBaseline,ThemeProvider } from '@material-ui/core';
-import { createTheme } from '@material-ui/core';
+import { CssBaseline,ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   return (
     <div >
       <Router>
-        <ThemeProvider theme={theme}>ü
+        <ThemeProvider theme={theme}>
           <CssBaseline/>
           <Navbar />
           <Routes>
