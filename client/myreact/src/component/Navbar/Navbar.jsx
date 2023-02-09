@@ -5,8 +5,16 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
-import { useTheme, IconButton, FormControl, Select, InputBase, MenuItem, Typography } from '@mui/material';
-import { DarkMode, LightMode, Menu } from '@mui/icons-material'
+import {
+  useTheme,
+  IconButton,
+  FormControl,
+  Select,
+  InputBase,
+  MenuItem,
+  Typography,
+} from "@mui/material";
+import { DarkMode, LightMode, Menu } from "@mui/icons-material";
 import { setMode, setLogout } from "../../states";
 
 const Header = () => {
@@ -16,13 +24,10 @@ const Header = () => {
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
-  const background = theme.palette.background.default;
-  const primaryLight = theme.palette.primary.light;
-  const alt = theme.palette.background.alt;
 
-  const nick = user?.nick
+  const nick = user?.nick;
 
-  console.log(user)
+  console.log(user);
 
   return (
     <Navbar bg={neutralLight} expand="lg">
@@ -42,40 +47,48 @@ const Header = () => {
             style={{ padding: "2px", justifyContent: "space-between" }}
             className="justify-content-end flex-grow-1 pe-3"
           >
-            <Nav.Link style={{fontSize:'14px'}} href="/">Home</Nav.Link>
-            <Nav.Link style={{fontSize:'14px'}} href="#link">Looking For Player</Nav.Link>
-            <Nav.Link style={{fontSize:'14px'}} href="#link">Tournaments</Nav.Link>
+            <Nav.Link style={{ fontSize: "14px" }} href="/">
+              Home
+            </Nav.Link>
+            <Nav.Link style={{ fontSize: "14px" }} href="#link">
+              Looking For Player
+            </Nav.Link>
+            <Nav.Link style={{ fontSize: "14px" }} href="#link">
+              Tournaments
+            </Nav.Link>
             <IconButton onClick={() => dispatch(setMode())}>
-            {theme.palette.mode === "dark" ? (
-              <DarkMode sx={{ fontSize: "25px" }} />
-            ) : (
-              <LightMode sx={{ color: dark, fontSize: "25px" }} />
-            )}
-          </IconButton>
-          <FormControl variant="standard" value={nick}>
-            <Select
-              value={nick}
-              sx={{
-                backgroundColor: neutralLight,
-                width: "150px",
-                borderRadius: "0.25rem",
-                p: "0.25rem 1rem",
-                "& .MuiSvgIcon-root": {
-                  pr: "0.25rem",
-                  width: "3rem",
-                },
-                "& .MuiSelect-select:focus": {
+              {theme.palette.mode === "dark" ? (
+                <DarkMode sx={{ fontSize: "25px" }} />
+              ) : (
+                <LightMode sx={{ color: dark, fontSize: "25px" }} />
+              )}
+            </IconButton>
+            <FormControl variant="standard" value={nick}>
+              <Select
+                value={nick}
+                sx={{
                   backgroundColor: neutralLight,
-                },
-              }}
-              input={<InputBase />}
-            >
-              <MenuItem value={nick}>
-                <Typography> {nick} </Typography>
-              </MenuItem>
-              <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
-            </Select>
-          </FormControl>
+                  width: "150px",
+                  borderRadius: "0.25rem",
+                  p: "0.25rem 1rem",
+                  "& .MuiSvgIcon-root": {
+                    pr: "0.25rem",
+                    width: "3rem",
+                  },
+                  "& .MuiSelect-select:focus": {
+                    backgroundColor: neutralLight,
+                  },
+                }}
+                input={<InputBase />}
+              >
+                <MenuItem value={nick}>
+                  <Typography> {nick} </Typography>
+                </MenuItem>
+                <MenuItem onClick={() => dispatch(setLogout())}>
+                  Log Out
+                </MenuItem>
+              </Select>
+            </FormControl>
             {/* <Nav.Link style={{fontSize:'14px'}} href="/login">Login</Nav.Link> */}
 
             {/* <NavDropdown title="Espada 6" id="basic-nav-dropdown">
