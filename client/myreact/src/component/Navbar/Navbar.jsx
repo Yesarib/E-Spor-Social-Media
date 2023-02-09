@@ -5,17 +5,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
-// import { setMode, setLogout } from 'state';
-import { useNavigate } from "react-router-dom";
-import { useTheme } from '@mui/material';
-import { DarkMode, LightMode } from '@mui/icons-material'
-import { IconButton } from "@mui/material";
+import { useTheme, IconButton, FormControl, Select, InputBase, MenuItem, Typography } from '@mui/material';
+import { DarkMode, LightMode, Menu } from '@mui/icons-material'
 import { setMode, setLogout } from "../../states";
 
 const Header = () => {
   // const [isMobil,setIsMobil] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
@@ -24,7 +20,10 @@ const Header = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  // const name = user.nick;
+  const nick = user?.nick
+
+  console.log(user)
+
   return (
     <Navbar bg={neutralLight} expand="lg">
       <Container>
@@ -53,7 +52,31 @@ const Header = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-            <Nav.Link style={{fontSize:'14px'}} href="/login">Login</Nav.Link>
+          <FormControl variant="standard" value={nick}>
+            <Select
+              value={nick}
+              sx={{
+                backgroundColor: neutralLight,
+                width: "150px",
+                borderRadius: "0.25rem",
+                p: "0.25rem 1rem",
+                "& .MuiSvgIcon-root": {
+                  pr: "0.25rem",
+                  width: "3rem",
+                },
+                "& .MuiSelect-select:focus": {
+                  backgroundColor: neutralLight,
+                },
+              }}
+              input={<InputBase />}
+            >
+              <MenuItem value={nick}>
+                <Typography> {nick} </Typography>
+              </MenuItem>
+              <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+            </Select>
+          </FormControl>
+            {/* <Nav.Link style={{fontSize:'14px'}} href="/login">Login</Nav.Link> */}
 
             {/* <NavDropdown title="Espada 6" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Profil</NavDropdown.Item>

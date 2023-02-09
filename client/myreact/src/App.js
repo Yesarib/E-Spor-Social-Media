@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home/Home';
 import Navbar from './component/Navbar/Navbar'
@@ -16,15 +16,15 @@ function App() {
 
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
-
+  const isAuth = Boolean(useSelector((state) => state.token))
   return (
-    <div >
+    <div>
       <Router>
         <ThemeProvider theme={theme}>
           <CssBaseline/>
           <Navbar />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={isAuth ? <Home /> : <Navigate to='/login'/>} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile/:userId' element={<Profile />} />
