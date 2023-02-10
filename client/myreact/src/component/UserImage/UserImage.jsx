@@ -13,3 +13,5 @@ const UserImage = ({image,size='60px'}) =>  {
         </Box>
     )
 }
+
+export default UserImage
