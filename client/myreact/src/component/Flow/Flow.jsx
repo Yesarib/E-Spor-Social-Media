@@ -1,6 +1,6 @@
 import React from 'react'
-import Share from '../Share/Share'
-import Post from '../Posts/Post'
+import Share from '../HomeComponents/Share/Share'
+import Post from '../HomeComponents/Posts/Post'
 import { Posts } from '../../datas/Posts'
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./post.css";
 import { MoreVert } from "@material-ui/icons";
-import { Users } from "../../datas/Posts";
+import { Users } from "../../../datas/Posts";
 import { useState } from "react";
 
 const Post = ({post}) => {
