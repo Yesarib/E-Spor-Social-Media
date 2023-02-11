@@ -1,8 +1,9 @@
 import React from "react";
 import './home.css'
-import Flow from "../../component/Flow/Flow";
+import Flow from "../../component/HomeComponents/Flow/Flow";
 import Left from "../../component/HomeComponents/LeftHome/Left";
 import { useSelector } from "react-redux";
+import Share from "../../component/HomeComponents/Share/Share";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
       {/* -----------------Middle Buradan Başlıyor --------------------------------------------------*/}
 
       <div className="mid">
+        <Share />
         <Flow />
       </div>
 

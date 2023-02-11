@@ -78,6 +78,8 @@ const Share = ({ picturePath }) => {
                 color: palette.background.alt,
                 "&:hover": { color: "black" },
               }}
+              onClick={handlePost}
+              disabled={!post}
             >
               Share
             </Button>
