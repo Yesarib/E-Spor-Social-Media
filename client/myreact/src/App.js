@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home/Home';
-import Navbar from './component/Navbar/Navbar'
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Profile from './pages/Profile/Profile';
@@ -22,7 +21,6 @@ function App() {
       <Router>
         <ThemeProvider theme={theme}>
           <CssBaseline/>
-          <Navbar />
           <Routes>
             <Route path='/' element={isAuth ? <Home /> : <Navigate to='/login'/>} />
             <Route path='/login' element={<Login />} />

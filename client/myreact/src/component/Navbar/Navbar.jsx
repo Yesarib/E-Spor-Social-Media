@@ -56,13 +56,7 @@ const Header = () => {
             <Nav.Link style={{ fontSize: "14px" }} href="#link">
               Tournaments
             </Nav.Link>
-            <IconButton onClick={() => dispatch(setMode())}>
-              {theme.palette.mode === "dark" ? (
-                <DarkMode sx={{ fontSize: "25px" }} />
-              ) : (
-                <LightMode sx={{ color: dark, fontSize: "25px" }} />
-              )}
-            </IconButton>
+            
             <FormControl variant="standard" value={nick}>
               <Select
                 value={nick}
@@ -86,6 +80,15 @@ const Header = () => {
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
                   Log Out
+                </MenuItem>
+                <MenuItem>
+                  <IconButton onClick={() => dispatch(setMode())}>
+                    {theme.palette.mode === "dark" ? (
+                      <DarkMode sx={{ fontSize: "25px" }} />
+                    ) : (
+                      <LightMode sx={{ color: dark, fontSize: "25px" }} />
+                    )}
+                  </IconButton>
                 </MenuItem>
               </Select>
             </FormControl>

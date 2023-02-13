@@ -4,6 +4,7 @@ import Flow from "../../component/HomeComponents/Flow/Flow";
 import Left from "../../component/HomeComponents/LeftHome/Left";
 import { useSelector } from "react-redux";
 import Share from "../../component/HomeComponents/Share/Share";
+import Navbar from '../../component/Navbar/Navbar'
 
 
 
@@ -14,7 +15,10 @@ const Home = () => {
   console.log(picture)
 
   return (
+    <>
+    <Navbar />
     <div style={{display:'flex',flexDirection:'row'}}>
+
       {/* -----------------Left Buradan Başlıyor --------------------------------------------------*/}
       <div >
         <Left userId={_id} picturePath={picture}/>
@@ -67,6 +71,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
