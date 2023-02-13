@@ -20,7 +20,7 @@ const Post = ({
   postUserId,
   name,
   description,
-  nicks,
+  nick,
   picturePath,
   userPicturePath,
   likes,
@@ -61,8 +61,8 @@ const Post = ({
     <WidgetWrapper m="2rem 0">
       <Follow
         friendId={postUserId}
-        name={name}
-        subtitle={nicks}
+        name={nick}
+        subtitle={name}
         userPicturePath={userPicturePath}
       />
       <Typography color={main} sx={{ mt: "1rem" }}>

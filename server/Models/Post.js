@@ -5,14 +5,22 @@ const PostSchema = new mongoose.Schema(
         userId:{
             type: String,
             required:true,
+        },        
+        firstName: {
+            type: String,
+            required: true,
+        },
+        lastName: {
+            type: String,
+            required: true,
         },
         nick:{
             type: String,
             required:true,
         },
-        desc : String,
+        description : String,
         picturePath : String,
-        userPicture : String,
+        userPicturePath : String,
         likes: {
             type: Map,
             of: Boolean,

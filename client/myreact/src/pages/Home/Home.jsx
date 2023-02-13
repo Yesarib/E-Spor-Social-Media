@@ -9,21 +9,21 @@ import Share from "../../component/HomeComponents/Share/Share";
 
 
 const Home = () => {
-
-  const { _id, picturePath } = useSelector((state) => state.user)
-  console.log(picturePath)
+  
+  const { _id, picture } = useSelector((state) => state.user)
+  console.log(picture)
 
   return (
     <div style={{display:'flex',flexDirection:'row'}}>
       {/* -----------------Left Buradan Başlıyor --------------------------------------------------*/}
       <div >
-        <Left userId={_id} picturePath={picturePath}/>
+        <Left userId={_id} picturePath={picture}/>
       </div>
             
       {/* -----------------Middle Buradan Başlıyor --------------------------------------------------*/}
 
       <div className="mid">
-        <Share picturePath={picturePath}/>
+        <Share picturePath={picture}/>
         <Flow userId={_id} />
       </div>
 

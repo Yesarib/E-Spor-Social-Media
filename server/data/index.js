@@ -130,6 +130,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[1],
+    firstName: "Steve",
+    lastName: 'Ralph',
     nick: 'Jtynre',
     description: "Some really long random description",
     picturePath: "post1.jpeg",
@@ -149,6 +151,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[3],
+    firstName: "Whatca",
+    lastName: 'Doing',
     nick : 'Peran',
     description:
       "Another really long random description. This one is longer than the previous one.",
@@ -170,6 +174,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[4],
+    firstName: "Jane",
+    lastName: 'Doe',
     nick : 'Psyhco',
     description:
       "This is the last really long random description. This one is longer than the previous one.",
@@ -192,6 +198,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[5],
+    firstName: "Enibera",
+    lastName: 'Ralph',
     nick: 'ENIBERA',
     description:
       "This is the last really long random description. This one is longer than the previous one. Man I'm bored. I'm going to keep typing until I run out of things to say.",
@@ -214,6 +222,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[6],
+    firstName: "Yaya",
+    lastName: 'Vowel',
     nick: 'Meagnaa',
     description:
       "Just a short description. I'm tired of typing. I'm going to play video games now.",
@@ -236,6 +246,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[7],
+    firstName: "Yesari",
+    lastName: 'Dunn',
     nick : 'Espada 6',
     description:
       "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
