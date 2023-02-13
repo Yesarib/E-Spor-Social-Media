@@ -52,7 +52,7 @@ const Left = ({ userId, picturePath }) => {
       <div className="left">
         <div className="profile">
           <div onClick={() => navigate(`/profile/${userId}`)}>
-            <UserImage image={picturePath}/>
+            <UserImage image={picturePath} size='100px'/>
           </div>          
         </div>
         <div className="profile-info">
