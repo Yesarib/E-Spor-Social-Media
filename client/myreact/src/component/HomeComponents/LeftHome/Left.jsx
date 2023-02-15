@@ -16,8 +16,6 @@ const Left = ({ userId, picturePath }) => {
   const navigate = useNavigate();
   const token = useSelector((state) => state.token);
   const dark = palette.neutral.dark;
-  const medium = palette.neutral.medium;
-  const main = palette.neutral.main;
 
   const getUser = async () => {
     const response = await fetch(`http://localhost:3001/users/${userId}`, {
@@ -45,7 +43,7 @@ const Left = ({ userId, picturePath }) => {
 
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper style={{marginTop:'40px'}}>
     <div style={{display:'flex',flexDirection:'row'}}>
       {/* -----------------Left Buradan Başlıyor --------------------------------------------------*/}
 

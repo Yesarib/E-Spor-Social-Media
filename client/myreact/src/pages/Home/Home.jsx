@@ -5,6 +5,7 @@ import Left from "../../component/HomeComponents/LeftHome/Left";
 import { useSelector } from "react-redux";
 import Share from "../../component/HomeComponents/Share/Share";
 import Navbar from '../../component/Navbar/Navbar'
+import Tournoments from '../../component/HomeComponents/RightHome/Tournoments'
 
 
 
@@ -34,41 +35,7 @@ const Home = () => {
       {/* -----------------Right Buradan Başlıyor --------------------------------------------------*/}
 
       <div className="right">
-        <div className="tournament">
-          <h5 >Upcoming Tournaments</h5>
-          <div className="tournament-info">
-            <div >
-              <p style={{float:'left',marginLeft:'15px'}}>PUBG: Battlegrounds</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>S Tier</p>
-            </div>
-            <div>
-              <p style={{float:'left',marginLeft:'15px'}}>PUBG: Battlegrounds</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>A Tier</p>
-            </div>
-            <div>
-              <p style={{float:'left',marginLeft:'15px'}}>Apex Legends</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>S Tier</p>
-            </div>
-            
-          </div>
-        </div>
-        <div className="teams">
-          <h5 style={{marginLeft:'15px',marginTop:'40px'}}>Looking For Team</h5>
-          <div className="teams-info">
-            <div>
-              <p style={{float:'left',marginLeft:'15px'}}>Thunder</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>PUBG: Battlegrounds</p>
-            </div>
-            <div>
-              <p style={{float:'left',marginLeft:'15px'}}>PULSE</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>Apex Legends</p>
-            </div>
-            <div>
-              <p style={{float:'left',marginLeft:'15px'}}>Silver Ferms</p>
-              <p style={{display:'flex',float:'right',marginRight:'20px'}}>Apex Legends</p>
-            </div>
-          </div>
-        </div>
+        <Tournoments />
       </div>
     </div>
     </>
