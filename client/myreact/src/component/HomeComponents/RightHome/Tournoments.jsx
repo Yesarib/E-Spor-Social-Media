@@ -16,8 +16,14 @@ const AdvertWidget = () => {
             <Typography color={medium}>Tournements A</Typography>
             <Typography color={medium}>Tournements B</Typography>
         </Typography>
-        <Typography style={{marginTop:'15px'}} color={main}>PUBG:Battlegrounds</Typography>
-        <Typography style={{marginTop:'15px'}} color={main}>Apex Legends</Typography>
+        <Typography style={{marginTop:'15px'}} color={main}>PUBG:Battlegrounds
+            <Typography color={medium}>Tournements A</Typography>
+            <Typography color={medium}>Tournements B</Typography>
+        </Typography>
+        <Typography style={{marginTop:'15px'}} color={main}>Apex Legends
+            <Typography color={medium}>Tournements A</Typography>
+            <Typography color={medium}>Tournements B</Typography>
+        </Typography>
       <Typography color={medium} m="0.5rem 0">
       </Typography>
     </WidgetWrapper>
