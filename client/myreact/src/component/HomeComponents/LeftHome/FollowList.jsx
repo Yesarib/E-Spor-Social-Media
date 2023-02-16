@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFollow } from "../../../states";
 
-const FriendListWidget = ({ userId }) => {
+const FollowList = ({ userId }) => {
   const dispatch = useDispatch();
   const { palette } = useTheme();
   const token = useSelector((state) => state.token);
@@ -52,4 +52,4 @@ const FriendListWidget = ({ userId }) => {
   );
 };
 
-export default FriendListWidget;
+export default FollowList;
