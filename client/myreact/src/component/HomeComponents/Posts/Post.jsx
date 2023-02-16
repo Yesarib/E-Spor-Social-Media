@@ -77,36 +77,47 @@ const Post = ({
           src={`http://localhost:3001/assets/${picturePath}`}
         />
       )}
-      <IconButton onClick={patchLike}>
-        {isLikeds ? (
-          <FavoriteOutlined sx={{ color: primary }} />
-        ) : (
-          <FavoriteBorderOutlined />
+      <div >
+        <div className="flexbetween" style={{gap:'1rem'}}>
+          <div className="flexbetween" style={{gap:'0.3rem'}}>
+            <IconButton  onClick={patchLike}>
+              {isLikeds ? (
+                <FavoriteOutlined  sx={{ color: primary }} />
+              ) : (
+                <FavoriteBorderOutlined />
+              )}
+            </IconButton>
+            <Typography>{likeCount}</Typography>
+          </div>
+          
+          <div className="flexbetween" style={{gap:'0.3rem'}}>
+            <IconButton onClick={() => setIsComments(!isComments)}>
+              <ChatBubbleOutlineOutlined />
+            </IconButton>
+            <Typography>{comments.length}</Typography>
+          </div>
+        
+        
+        
+        <IconButton>
+          <ShareOutlined />
+        </IconButton>
+        </div>
+        {isComments && (
+          <Box mt="0.5rem">
+            {comments.map((comment, i) => (
+              <Box key={`${name}-${i}`}>
+                <Divider />
+                <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
+                  {comment}
+                </Typography>
+              </Box>
+            ))}
+            <Divider />
+          </Box>
         )}
-      </IconButton>
-      <Typography>{likeCount}</Typography>
-
-      <IconButton onClick={() => setIsComments(!isComments)}>
-        <ChatBubbleOutlineOutlined />
-      </IconButton>
-      <Typography>{comments.length}</Typography>
-
-      <IconButton>
-        <ShareOutlined />
-      </IconButton>
-      {isComments && (
-        <Box mt="0.5rem">
-          {comments.map((comment, i) => (
-            <Box key={`${name}-${i}`}>
-              <Divider />
-              <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
-                {comment}
-              </Typography>
-            </Box>
-          ))}
-          <Divider />
-        </Box>
-      )}
+      </div>
+      
     </WidgetWrapper>
 
     // <WidgetWrapper>

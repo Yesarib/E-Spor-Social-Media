@@ -76,3 +76,10 @@
       border-bottom: 1px dashed gray;
       font-size: 15px;
   }
+
+
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

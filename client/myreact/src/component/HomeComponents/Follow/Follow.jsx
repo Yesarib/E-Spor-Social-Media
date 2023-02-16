@@ -61,7 +61,7 @@ const Follow = ({ friendId, name, subtitle, userPicturePath }) => {
             {subtitle}
           </Typography>
         </Box>
-      <IconButton
+      <IconButton style={{display:'flex', float:'right'}}
         onClick={() => patchFriend()}
         sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
       >
