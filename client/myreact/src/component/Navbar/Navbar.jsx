@@ -50,10 +50,10 @@ const Header = () => {
             <Nav.Link style={{ fontSize: "14px" }} href="/">
               Home
             </Nav.Link>
-            <Nav.Link style={{ fontSize: "14px" }} href="#link">
+            <Nav.Link style={{ fontSize: "14px" }} href="/lfp">
               Looking For Player
             </Nav.Link>
-            <Nav.Link style={{ fontSize: "14px" }} href="#link">
+            <Nav.Link style={{ fontSize: "14px" }} href="/tournaments">
               Tournaments
             </Nav.Link>
             

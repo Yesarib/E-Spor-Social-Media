@@ -1,6 +1,5 @@
 import "./share.css";
-import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
-import Dropzone from "react-dropzone";
+import { PermMedia, Label } from "@material-ui/icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../../../states";
@@ -55,6 +54,7 @@ const Share = ({ picturePath }) => {
               }}
             />
           </div>
+          
           <hr className="shareHr" />
           <div className="shareBottom">
             <div className="shareOptions">

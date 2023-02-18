@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux';
 import { CssBaseline,ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
+import Lfp from './pages/LookingForPlayer/Lfp';
+import Tournaments from './pages/Tournaments/Tournaments';
 
 function App() {
 
@@ -26,6 +28,9 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/profile/:userId' element={isAuth ? <Profile /> : <Navigate to="/" />}/>
+            <Route path='/lfp' element={<Lfp />} />
+            <Route path='/tournaments' element={<Tournaments />} />
+
           </Routes>
         </ThemeProvider>
         
